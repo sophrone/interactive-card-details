@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+      type="image/png"
+    />
+    <title>Frontend Mentor | Interactive Card Details Form</title>
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <div class="left flex">
+          <div class="bg-card back-view">
+            <img
+              src="./assets/images/bg-card-back.png"
+              alt="bg-card-back"
+              class="bg-card-img"
+            />
+            <span id="cvc">000</span>
+          </div>
+
+          <div class="bg-card front-view">
+            <img
+              src="./assets/images/bg-card-front.png"
+              alt="bg-card-front"
+              class="bg-card-img"
+            />
+            <img
+              src="./assets/images/card-logo.svg"
+              alt="card-logo"
+              id="logo"
+            />
+            <span id="card-number">0000 0000 0000 0000</span>
+            <span id="name">Jane Appleseed</span>
+            <span id="exp-date">
+              <span id="exp-month">00</span>/<span id="exp-year">00</span></span
+            >
+          </div>
+        </div>
+
+        <div class="right flex">
+          <form action="#" id="card-form">
+            <div class="form-container">
+              <label for="card-name-input">Cardholder Name</label>
+              <input
+                type="text"
+                class="input"
+                id="card-name-input"
+                placeholder="e.g. Jane Appleseed"
+              />
+              <span class="input-error" role="alert" aria-hidden="true"
+                >Can't be blank</span
+              >
+              <label for="card-number-input">Card Number</label>
+              <input
+                type="text"
+                class="input detail-input"
+                id="card-number-input"
+                placeholder="1234 5678 9123 0000"
+              />
+              <span class="input-error" role="alert" aria-hidden="true"
+                >Can't be blank</span
+              >
+              <label>Exp. Date (MM/YY) CVC</label>
+              <div class="details-container">
+                <div class="input-area">
+                  <input
+                    type="text"
+                    class="input detail-input"
+                    id="month-input"
+                    placeholder="MM"
+                  />
+                  <span class="input-error" role="alert" aria-hidden="true"
+                    >Can't be blank</span
+                  >
+                </div>
+                <div class="input-area">
+                  <input
+                    type="text"
+                    class="input detail-input"
+                    id="year-input"
+                    placeholder="YY"
+                  />
+                  <span class="input-error" role="alert" aria-hidden="true"
+                    >Can't be blank</span
+                  >
+                </div>
+                <div class="input-area">
+                  <input
+                    type="text"
+                    class="input detail-input"
+                    id="cvc-input"
+                    placeholder="e.g. 123"
+                  />
+                  <span class="input-error" role="alert" aria-hidden="true"
+                    >Can't be blank</span
+                  >
+                </div>
+              </div>
+              <button class="btn" type="submit">Confirm</button>
+            </div>
+          </form>
+
+          <div id="confirm" class="hidden flex">
+            <img src="./assets/images/icon-complete.svg" alt="icon-complete" />
+            <h2>Thank You</h2>
+            <span>We've added your card details</span>
+            <button class="btn" id="continue" type="submit">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
